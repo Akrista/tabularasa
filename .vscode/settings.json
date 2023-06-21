@@ -11,6 +11,12 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file"
   },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
   "i18n-ally.localesPaths": ["front/src/locales"],
   "i18n-ally.enabledParsers": ["json"],
   "i18n-ally.keystyle": "nested",
@@ -29,7 +35,7 @@
   "rust-analyzer.inlayHints.mode": "type",
   "python.linting.enabled": true,
   "python.pythonPath": "path/to/your/python/env",
-  "python.formatting.provider": "autopep8",
+  "python.formatting.provider": "none",
   "python.formatting.autopep8Path": "path/to/your/autopep8",
   "python.formatting.autopep8Args": ["--max-line-length=100"]
 }
