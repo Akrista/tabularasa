@@ -1,10 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/postgres
 {
-  "name": "Python 3 & PostgreSQL",
+  "name": "Tabularasa",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/node:1": {},
@@ -13,18 +14,42 @@
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {}
   },
 
-  // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
-
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // This can be used to network with other containers or the host.
   // "forwardPorts": [5000, 5432],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "pip install --user -r ./pyback/requirements.txt"
+  "postCreateCommand": "pip install --user -r ./pyback/requirements.txt",
 
   // Configure tool-specific properties.
-  // "customizations": {},
+  "customizations": {
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      // "settings": {},
+      "extensions": [
+        // Frontend
+        "svelte.svelte-vscode",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "antfu.iconify",
+        "lokalise.i18n-ally",
+        // Rustbackend
+        "rust-lang.rust-analyzer",
+        // Pythonbackend
+        "batisteo.vscode-django",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.autopep8",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.datawrangler",
+        // General
+        "ms-azuretools.vscode-docker",
+        "ms-vscode-remote.remote-containers",
+        "eamodio.gitlens",
+        "GitHub.copilot-nightly"
+      ]
+    }
+  }
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"

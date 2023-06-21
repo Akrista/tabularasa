@@ -1,6 +1,16 @@
 {
-  "eslint.validate": ["javascript", "typescript", "svelte"],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "svelte",
+    "markdown",
+    "python",
+    "ipynb"
+  ],
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  "editor.stickyScroll.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": true,
   "files.associations": { "*.svelte": "svelte" },
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
@@ -12,7 +22,10 @@
     "editor.formatOnSaveMode": "file"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file"
   },
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer"
@@ -37,5 +50,6 @@
   "python.pythonPath": "path/to/your/python/env",
   "python.formatting.provider": "none",
   "python.formatting.autopep8Path": "path/to/your/autopep8",
-  "python.formatting.autopep8Args": ["--max-line-length=100"]
+  "python.formatting.autopep8Args": ["--max-line-length=100"],
+  "notebook.lineNumbers": "on"
 }
