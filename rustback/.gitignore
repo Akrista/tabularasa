@@ -1,0 +1,20 @@
+# Ignore compiled files
+/target/
+
+# Ignore editor and IDE specific files and directories
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Ignore build artifacts
+Cargo.lock
+**/target
+
+# Ignore generated documentation
+**/target/doc
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
