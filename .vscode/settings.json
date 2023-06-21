@@ -1,6 +1,7 @@
 {
-  "eslint.validate": ["javascript", "typescript"],
+  "eslint.validate": ["javascript", "typescript", "svelte"],
   "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  "files.associations": { "*.svelte": "svelte" },
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
@@ -10,13 +11,13 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file"
   },
-  "i18n-ally.localesPaths": ["frontend/src/locales"],
+  "i18n-ally.localesPaths": ["front/src/locales"],
   "i18n-ally.enabledParsers": ["json"],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.sourceLanguage": "en-US",
   "i18n-ally.displayLanguage": "en-US",
   "i18n-ally.editor.preferEditor": true,
-  "i18n-ally.enabledFrameworks": ["vue"],
+  "i18n-ally.enabledFrameworks": ["svelte"],
   "i18n-ally.parserOptions": {},
   "rust-analyzer.diagnostics.disabled": ["unresolved-import"],
   "rust-analyzer.cargo.allFeatures": true,
@@ -25,5 +26,10 @@
   "rust-analyzer.checkOnSave.enable": true,
   "rust-analyzer.checkOnSave.command": "cargo check --all-features",
   "rust-analyzer.inlayHints.enable": true,
-  "rust-analyzer.inlayHints.mode": "type"
+  "rust-analyzer.inlayHints.mode": "type",
+  "python.linting.enabled": true,
+  "python.pythonPath": "path/to/your/python/env",
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Path": "path/to/your/autopep8",
+  "python.formatting.autopep8Args": ["--max-line-length=100"]
 }
